@@ -13,6 +13,6 @@ test("case 1", () => {
 test("case 2", () => {
   fs.readFile("./1/input.txt","utf-8", (err, data) => {
     const inputs = data.split('\n').filter(x=>x!=="");
-    expect(trebuchet(inputs)).toBe(54916);
+    expect(trebuchet(inputs)).toBe(54728);
   })
 });

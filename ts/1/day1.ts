@@ -31,7 +31,6 @@ export function trebuchet(inputs: string[]) {
             if(isNumber(val)) {
                 nums.push(val)
             } else if(map.has(val)) {
-                let isFoundWord = false;
                 const words = map.get(val);
                 for (const word of words) {
                     let wordIndex = 1;
@@ -40,7 +39,6 @@ export function trebuchet(inputs: string[]) {
                         if (input[index2] === word[wordIndex]) {
                             if(wordIndex === word.length-1){
                                 nums.push(al[word]);
-                                isFoundWord=true;
                                 break;
                             }else {
                                 index2++;
@@ -50,7 +48,6 @@ export function trebuchet(inputs: string[]) {
                             break;
                         }
                     }
-                    // if(isFoundWord)break;
                 }
             }
             index++;
